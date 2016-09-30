@@ -1,0 +1,134 @@
+/*
+ *  Posting view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@grid-gutter-dist: 3%;  // in %
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view-post-grid {
+  margin: 0 auto;
+  width: 100%;
+
+  .view-content {
+    padding: 30px 0 50px;
+
+    > .pe-container {
+      width: 100%;
+
+      .grid-sizer, .pe-item {
+        width: 100%;
+      }
+
+      .gutter-sizer {
+        width: 0;
+      }
+
+      @media @special-break {
+        .grid-sizer, .pe-item {
+          width: (50% - @grid-gutter-dist/2);
+        }
+
+        .gutter-sizer {
+          width: @grid-gutter-dist;
+        }
+      }
+
+      @media @wide {
+        .grid-sizer, .pe-item {
+          width: 31.33333%;
+        }
+      }
+
+      .pe-item {
+        display: block;
+        overflow: visible;
+        margin: 0 0 5*@grid-gutter-dist !important;
+        opacity: 0.9;
+        #pxl-mixins.transition(opacity 1s);
+
+        @media @narrow {
+          margin: 0 0 3.5*@grid-gutter-dist !important;
+        }
+        @media @special-break {
+          margin: 0 0 2.5*@grid-gutter-dist !important;
+        }
+
+        &.shown {
+          opacity: 1.0;
+        }
+
+        &.pe-item-ajax, &.pe-item-no-ajax, &.pe-item-linked {
+          cursor: pointer;
+          // see nodes styling (posts, testimonials, SoMe etc.)
+        }
+      }
+
+      // modal dialog
+      .modal {
+        #pxl-mixins.modal();
+      }
+    }
+  }
+
+  //
+  // view pager
+  #pxl-mixins.view-pager(18px, @text-color, @text-color);
+
+  ul.pagination {
+    li {
+      &:hover, &:focus, &.active {
+        a, span {
+          font-family: @pxl-text-font-bold;
+          text-decoration: none;
+          font-size: 20px;
+          background: none;
+        }
+      }
+
+      &.pager-first,
+      &.pager-last,
+      &.prev, &.pager-previous,
+      &.next, &.pager-next {
+        &:hover, &:focus, &.active {
+          a, span {
+            font-family: @pxl-text-font;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // infinite scrolling pager
+  .pager.pager--infinite-scroll {
+    .pager__item {
+      a {
+        display: inline-block;
+        padding: 8px 20px 10px;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        color: @text-color;
+        #pxl-mixins.border-radius(3px);
+        border: 1px solid @text-color;
+        background-color: #fff;
+
+        &:hover, &.active {
+          color: #fff;
+          background-color: @text-color;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,64 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+// Google font
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+@pxl-bs-path: '../bootstrap';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'Catamaran-ExtraBold', sans-serif;
+
+// text fonts
+@pxl-text-font: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-light: 'Catamaran-Light', sans-serif;
+@pxl-text-font-medium: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-bold: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-italic: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-light-italic: 'Catamaran-Light', sans-serif;
+@pxl-text-font-bold-italics: 'Catamaran-ExtraBold', sans-serif;
+
+// handwriter font
+@pxl-text-font-handwriter: cursive;
+
+// monospace font
+@pxl-text-font-mono: 'Courier', monospace;
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+// overrides
+@font-family-base: @pxl-text-font;
+
+//
+// font faces
+//
+@font-face {
+  font-family: 'Catamaran-Light';
+  src: url('@{pxl-font-path}/CatamaranLight/CatamaranLight.eot');
+  src: url('@{pxl-font-path}/CatamaranLight/CatamaranLight.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.woff2') format('woff2'),
+  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.woff') format('woff'),
+  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.ttf') format('truetype'),
+  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.svg#CatamaranLight') format('svg');
+}
+
+@font-face {
+  font-family: 'Catamaran-ExtraBold';
+  src: url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.eot');
+  src: url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.woff') format('woff'),
+  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.svg#CatamaranExtraBold') format('svg');
+}

@@ -1,0 +1,230 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+header#navbar {
+  margin: 0;
+  border-bottom: none;
+  background: white none;
+  #pxl-mixins.box-shadow(0 4px 3px -4px gray);
+
+  .navbar-top-container > .container {
+    position: relative;
+    padding: 0 @grid-gutter-width / 2;
+    height: auto;
+
+    .navbar-meta {
+      position: relative;
+      top: -10px;
+      right: 0;
+      z-index: 10;
+
+      .block-locale {
+        position: absolute;
+        right: 0;
+        top: @grid-gutter-width / 2;
+
+        // see block-language.less
+
+      }
+    }
+
+    .navbar-header {
+      position: relative;
+      float: none;
+      margin: 0;
+      text-align: left;
+
+      // header (branding)
+      a.logo {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 0;
+        outline: none;
+        min-height: 60px;
+
+        @media @normal {
+          margin-left: -50px;
+        }
+
+        img {
+          margin: 0;
+          width: 150px;
+          height: auto;
+          max-width: 100%;
+          max-height: none;
+
+          @media @narrow {
+            width: 200px;
+          }
+          @media @tablet {
+            width: 300px;
+          }
+          @media @normal {
+            width: 350px;
+          }
+        }
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        float: none;
+        #pxl-mixins.center-vertically(absolute);
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: @pxl-color-main;
+        border: none;
+        background: none;
+
+        &:hover {
+          color: @pxl-color-active;
+        }
+      }
+
+    }
+
+    // mobile collapse part
+    .navbar-collapse {
+      margin: 0 auto;
+      padding: 25px 0;
+      width: 100%;
+      border: none;
+      background: white;
+
+      nav {
+        text-align: center;
+        width: 100%;
+
+        .region-navigation {
+          display: inline-block;
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%;
+
+          > .block {
+            display: inline-block;
+          }
+        }
+
+        // main menu
+        ul.menu {
+          display: inline-block;
+          float: none;
+          margin: 0 auto;
+          padding: 0;
+          width: auto;
+          line-height: 1;
+
+          >li {
+            display: block;
+            float: none;
+            padding: 0;
+            line-height: 1;
+
+            a, span {
+              cursor: pointer;
+              display: inline-block;
+              padding: 15px 20px ;
+              font-family: @pxl-text-font-bold;
+              font-size: 40px;
+              line-height: 1;
+              color: @pxl-color-main;
+              outline: none;
+              background: none;
+
+              &:hover, &.active, &.checked {
+                color: @pxl-color-active;
+              }
+            }
+
+            &.last {
+              a, span {
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 0;
+                padding: 8px 5px 5px;
+                font-family: @pxl-text-font-bold;
+                line-height: 1;
+                letter-spacing: 1px;
+                color: white;
+                outline: none;
+                border: 1px solid @pxl-color-main;
+                #pxl-mixins.border-radius(0);
+                background: @pxl-color-main;
+
+                &:hover, &.active, &.checked {
+                  color: @pxl-color-main;
+                  background: white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media @tablet {
+        #pxl-mixins.align-vertically(60%, absolute);
+        right: @grid-gutter-width / 2;
+        margin: 0;
+        padding: 0;
+        width: auto;
+
+        nav {
+          .region-navigation {
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+            text-align: right;
+            width: auto;
+          }
+
+          ul.menu {
+            width: auto;
+            vertical-align: middle;
+            text-align: right;
+
+            li {
+              display: inline-block;
+              a, span {
+                padding: 3px 0;
+                font-size: 18px;
+              }
+              &.last {
+                a, span {
+                  margin-left: 15px;
+                  padding: 8px 15px 5px;
+                  border: 2px solid @pxl-color-main;
+                }
+              }
+            }
+          }
+        }
+      }
+      @media @normal {
+        nav {
+          ul.menu {
+            li {
+              a, span {
+                padding: 3px 0;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
