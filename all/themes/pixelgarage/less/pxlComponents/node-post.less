@@ -162,7 +162,7 @@
           bottom: 0;
           right: 10px;
           display: inline;
-          color: @pxl-color-main;
+          color: @pxl-color-active;
           line-height: 1.1;
           text-align: right;
           .resp-font-size(16px);
@@ -226,14 +226,16 @@
                 height: 24px;
                 text-indent: 100%;
                 white-space: nowrap;
-                background: url(../images/icon-herz.png) no-repeat center center / contain;
+                background: url(../images/icon-herz-hover.png) no-repeat center center / contain;
               }
             }
 
-            &:hover {
-              .rate-widget {
-                .rate-thumbs-up-btn-up {
-                  background: url(../images/icon-herz-hover.png) no-repeat center center / contain;
+            @media @normal {
+              &:hover {
+                .rate-widget {
+                  .rate-thumbs-up-btn-up {
+                    background: url(../images/icon-herz.png) no-repeat center center / contain;
+                  }
                 }
               }
             }

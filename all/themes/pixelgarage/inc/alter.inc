@@ -169,8 +169,7 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   if ($submission->data[20][0] == 'yes') {
     $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
   } else {
-    $img_uri = 'public://images/radioactivity.jpg';
-    $post->field_image[$post->language][0]['fid'] = _get_default_post_image($img_uri);
+    $post->field_image[$post->language][0]['fid'] = _get_default_post_image();
   }
   $post = node_submit($post);
   node_save($post);
@@ -302,9 +301,15 @@ function _post_delivery_step_presave(&$step_options, $node, &$submission) {
  * @param $filename
  * @return mixed
  */
-function _get_default_post_image($img_uri) {
+function _get_default_post_image() {
   //
   // query for image in db
+  $default_images = array(
+    'public://images/radioactivity.jpg',
+    'public://images/radioactivity-bin.png',
+  );
+  $img_uri = $default_images[mt_rand(0,1)];
+
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'file')
     ->propertyCondition('uri', $img_uri, 'LIKE')

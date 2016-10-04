@@ -48,30 +48,26 @@ header#navbar {
       // header (branding)
       a.logo {
         display: inline-block;
-        margin: 10px 0;
+        margin: 0;
         padding: 0;
         outline: none;
-        min-height: 60px;
-
-        @media @normal {
-          margin-left: -50px;
-        }
 
         img {
-          margin: 0;
-          width: 60px;
+          margin: 10px 0;
+          width: 140px;
           height: auto;
-          max-width: 100%;
-          max-height: none;
 
           @media @narrow {
-            width: 70px;
+            margin: 15px 0 15px;
+            width: 160px;
           }
           @media @tablet {
-            width: 80px;
+            margin: 30px 0 15px;
+            width: 180px;
           }
           @media @normal {
-            width: 80px;
+            margin: 35px 0 15px -40px;
+            width: 200px;
           }
         }
       }
@@ -160,12 +156,12 @@ header#navbar {
                 letter-spacing: 1px;
                 color: white;
                 outline: none;
-                border: 1px solid @pxl-color-main;
+                border: 1px solid @pxl-color-active;
                 #pxl-mixins.border-radius(0);
-                background: @pxl-color-main;
+                background: @pxl-color-active;
 
                 &:hover, &.active, &.checked {
-                  color: @pxl-color-main;
+                  color: @pxl-color-active;
                   background: white;
                 }
               }
@@ -205,7 +201,7 @@ header#navbar {
                 a, span {
                   margin-left: 15px;
                   padding: 8px 15px 5px;
-                  border: 2px solid @pxl-color-main;
+                  border: 2px solid @pxl-color-active;
                 }
               }
             }

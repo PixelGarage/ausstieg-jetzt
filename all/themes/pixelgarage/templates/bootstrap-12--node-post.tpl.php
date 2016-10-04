@@ -8,7 +8,7 @@
 $content = $variables['content'];
 $post_title = t('Support campaign!');
 $post_heading = t('Share this post with your friends and family members!');
-$post_claim = t('www.akw.sucks');
+$post_claim = t('www.akw.fail');
 ?>
 
 
