@@ -5,7 +5,7 @@
  */
 //
 // set language dependent heading
-$testimonial_claim = t('#EsGeht');
+$testimonial_claim = t('#AKWfail');
 ?>
 
 
