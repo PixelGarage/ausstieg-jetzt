@@ -9281,7 +9281,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   display: inline;
   color: #000000;
   line-height: 1.1;
-  text-align: left;
+  text-align: right;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
