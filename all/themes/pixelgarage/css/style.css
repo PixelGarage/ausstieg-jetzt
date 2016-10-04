@@ -9278,16 +9278,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   font-family: 'Catamaran-ExtraBold', sans-serif;
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item {
-  display: inline;
   color: #000000;
   line-height: 1.1;
   text-align: right;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xs {
   font-size: 5.2vw;
@@ -9359,49 +9352,49 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-lg {
-  font-size: 9.1vw;
+  font-size: 8.84vw;
 }
 @media screen and (min-width: 640px) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-lg {
-    font-size: 4.55vw;
+    font-size: 4.42vw;
   }
 }
 @media screen and (min-width: 48em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-lg {
-    font-size: 29.12px;
+    font-size: 28.288px;
   }
 }
 @media screen and (min-width: 64em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-lg {
-    font-size: 38.82666667px;
+    font-size: 37.71733333px;
   }
 }
 @media screen and (min-width: 80em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-lg {
-    font-size: 35px;
+    font-size: 34px;
   }
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xl {
-  font-size: 10.4vw;
+  font-size: 9.88vw;
 }
 @media screen and (min-width: 640px) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xl {
-    font-size: 5.2vw;
+    font-size: 4.94vw;
   }
 }
 @media screen and (min-width: 48em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xl {
-    font-size: 33.28px;
+    font-size: 31.616px;
   }
 }
 @media screen and (min-width: 64em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xl {
-    font-size: 44.37333333px;
+    font-size: 42.15466667px;
   }
 }
 @media screen and (min-width: 80em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xl {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .post-claim {
@@ -9557,11 +9550,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   background: url(../images/icon-bulb-white.png) no-repeat center center / contain;
 }
 .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xs {
-  font-size: 4vw;
+  font-size: 5vw;
 }
 @media screen and (min-width: 500px) {
   .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xs {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-sm {
