@@ -307,8 +307,9 @@ function _get_default_post_image() {
   $default_images = array(
     'public://images/radioactivity.jpg',
     'public://images/radioactivity-bin.png',
+    'public://images/tower.png',
   );
-  $img_uri = $default_images[mt_rand(0,1)];
+  $img_uri = $default_images[mt_rand(0,2)];
 
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'file')

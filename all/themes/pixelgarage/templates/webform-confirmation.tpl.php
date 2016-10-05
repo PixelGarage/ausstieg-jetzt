@@ -21,6 +21,7 @@
 
 // Donate confirmation
 $current_tnid = $node->tnid ? $node->tnid : $node->nid;
+$upload_tnid = 18;
 $delivery_tnid = 789;
 $donation_tnid = 808;
 $newsletter_tnid = 61;
@@ -28,6 +29,12 @@ $newsletter_tnid = 61;
 $title = t('Thank you,');
 
 switch ($current_tnid) {
+  case $upload_tnid:
+    $webform = node_load($upload_tnid);
+    $submission = webform_get_submission($upload_tnid, $variables['sid']);
+    $post_nid = _get_submission_value($webform, $submission, 'post_nid');
+    $ra_post = node_view(node_load($post_nid));
+    break;
   case $delivery_tnid:
     $message = t('for your investment into the green economy! We will send you the postcards in about a week!');
     break;
@@ -47,7 +54,14 @@ $url = '/';
 
 <div class="webform-confirmation">
   <div class="confirmation-title"><?php print $title; ?></div>
-  <div class="confirmation-message"><?php print $message; ?></div>
+  <?php if ($message): ?>
+    <div class="confirmation-message"><?php print $message; ?></div>
+  <?php endif; ?>
+  <div class="rendered-post">
+    <?php if ($ra_post): ?>
+      <?php print render($ra_post) ?>
+    <?php endif; ?>
+  </div>
 </div>
 
 <div class="links">

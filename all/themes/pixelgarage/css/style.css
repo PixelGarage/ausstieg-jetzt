@@ -9255,7 +9255,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-post {
   position: relative;
   margin: 0;
-  padding-bottom: 50%;
+  padding-bottom: 49.7%;
   width: 100%;
   height: 0;
   border: 1px solid #efefef;
@@ -9402,9 +9402,32 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
     font-size: 38px;
   }
 }
+.node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+  font-size: 12.48vw;
+}
+@media screen and (min-width: 640px) {
+  .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 6.24vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 39.936px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 53.248px;
+  }
+}
+@media screen and (min-width: 80em) {
+  .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 48px;
+  }
+}
 .node.node-post div.row div.col-sm-12 .quote-wrapper .post-claim {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   right: 10px;
   display: inline;
   color: #ff0000;
@@ -9594,6 +9617,29 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
     font-size: 40px;
   }
 }
+.node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+  font-size: 13vw;
+}
+@media screen and (min-width: 640px) {
+  .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 6.5vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 41.6px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 55.46666667px;
+  }
+}
+@media screen and (min-width: 80em) {
+  .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-item.font-size-xxl {
+    font-size: 50px;
+  }
+}
 .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .post-claim {
   font-size: 3.6vw;
 }
@@ -9640,6 +9686,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .field-name-newsletter .node.node-webform {
   margin: 0;
+}
+.node.node-webform .row .col-sm-12 .field-name-title,
+.node.node-webform .row .col-sm-6 .field-name-title {
+  display: none;
 }
 .node.node-webform .row .col-sm-12 .field-name-title h2,
 .node.node-webform .row .col-sm-6 .field-name-title h2 {
@@ -9891,6 +9941,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-6 .field-name-body p {
   line-height: 22px;
   text-align: left;
+  letter-spacing: 0.03em;
 }
 /*
  *  Node page component
@@ -13185,6 +13236,7 @@ form.confirmation div {
   }
 }
 form.confirmation div .form-actions button#edit-actions-submit {
+  text-transform: capitalize;
   color: white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13199,7 +13251,6 @@ form.confirmation div .form-actions button#edit-actions-submit {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13240,6 +13291,7 @@ form.confirmation div .form-actions button#edit-actions-submit:focus {
   background: none;
 }
 form.confirmation div .form-actions a#edit-actions-cancel {
+  text-transform: capitalize;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -13253,7 +13305,6 @@ form.confirmation div .form-actions a#edit-actions-cancel {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
@@ -13299,6 +13350,7 @@ form.confirmation div .form-actions a#edit-actions-cancel:focus {
  *  Webform Addons component
  * --------------------------------------------------*/
 form.webform-client-form {
+  position: relative;
   margin-top: 20px;
 }
 form.webform-client-form fieldset.panel {
@@ -13439,6 +13491,7 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   right: 2px;
   width: auto;
   height: auto;
+  text-transform: capitalize;
   color: white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13453,7 +13506,6 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13511,6 +13563,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   height: auto;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button {
+  text-transform: capitalize;
   color: white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13525,7 +13578,6 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13567,7 +13619,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   background: none;
 }
 form.webform-client-form .webform-component {
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   padding: 0;
   max-width: 100%;
   background: none;
@@ -13584,11 +13636,12 @@ form.webform-client-form .webform-component[class*="-city"] {
   width: 70%;
 }
 form.webform-client-form .webform-component label {
+  margin-bottom: 0;
   width: auto;
   font-family: 'Impact', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  letter-spacing: normal;
+  letter-spacing: 0.03em;
   text-align: left;
   text-transform: none;
   color: #000000;
@@ -13805,6 +13858,7 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   top: 0;
   right: 0;
   bottom: 0;
+  text-transform: capitalize;
   color: white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13819,7 +13873,6 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13892,6 +13945,11 @@ form.webform-client-form .webform-component.webform-component-markup p {
   text-align: left;
   background: none;
 }
+form.webform-client-form .webform-component.webform-component-markup.webform-component--legal {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+}
 form.webform-client-form .webform-component.webform-container-inline {
   position: relative;
 }
@@ -13937,6 +13995,7 @@ form.webform-client-form .webform-component.webform-container-inline .form-radio
   }
 }
 form.webform-client-form div.form-actions button.webform-submit {
+  text-transform: capitalize;
   color: white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13951,7 +14010,6 @@ form.webform-client-form div.form-actions button.webform-submit {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13991,6 +14049,7 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
   background: none;
 }
 form.webform-client-form div.form-actions a.back-link {
+  text-transform: capitalize;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -14004,7 +14063,6 @@ form.webform-client-form div.form-actions a.back-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
@@ -14059,6 +14117,7 @@ form.webform-client-form div.form-actions a.back-link:focus {
   }
 }
 form.webform-client-form div.form-actions a.done-link {
+  text-transform: capitalize;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -14072,7 +14131,6 @@ form.webform-client-form div.form-actions a.done-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
@@ -14137,12 +14195,11 @@ form.webform-client-form div.form-actions a.done-link:hover {
   margin: 50px auto;
   padding: 15px 30px;
   width: 80%;
-  color: #fff;
-  border: 1px solid #ff0000;
+  color: #000000;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: #ff0000;
+  background: none;
 }
 .webform-confirmation .confirmation-title {
   font-family: 'Impact', sans-serif;
@@ -14258,9 +14315,6 @@ header#navbar {
   margin: 0;
   border-bottom: none;
   background: white none;
-  -webkit-box-shadow: 0 4px 3px -4px gray;
-  -moz-box-shadow: 0 4px 3px -4px gray;
-  box-shadow: 0 4px 3px -4px gray;
 }
 header#navbar .navbar-top-container > .container {
   position: relative;
@@ -14309,7 +14363,7 @@ header#navbar .navbar-top-container > .container .navbar-header a.logo img {
 }
 @media screen and (min-width: 64em) {
   header#navbar .navbar-top-container > .container .navbar-header a.logo img {
-    margin: 35px 0 15px -40px;
+    margin: 35px 0 15px;
     width: 200px;
   }
 }
@@ -14520,6 +14574,7 @@ body .main-container #page-header .region-header h2.block-title {
   font-size: 24px;
 }
 body .main-container .row section h1.page-header {
+  display: none;
   margin: 20px 0 10px;
   font-family: 'Impact', sans-serif;
   font-size: 41px;

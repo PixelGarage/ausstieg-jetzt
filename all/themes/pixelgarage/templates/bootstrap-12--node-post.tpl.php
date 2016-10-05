@@ -18,10 +18,10 @@ $post_claim = t('www.akw.fail');
       <div class="post-title">
         <?php print $post_title ?>
       </div>
-      <div class="post-heading">
+      <!--div class="post-heading">
         <?php print $post_heading ?>
-      </div>
-      <!-- AddtoAny social share buttons
+      </div-->
+      <!-- AddtoAny social share buttons -->
       <div class="social-share">
         <div class="a2a_kit a2a_kit_size_32 addtoany_list">
           <a class="a2a_button_facebook"></a>
@@ -30,7 +30,6 @@ $post_claim = t('www.akw.fail');
         </div>
         <script async src="https://static.addtoany.com/menu/page.js"></script>
       </div>
-      -->
     </div>
     <div class="node-post-wrapper">
 <?php endif; ?>

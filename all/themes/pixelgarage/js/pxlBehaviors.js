@@ -9,6 +9,7 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
+   */
    Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       var isFixedHeader = true;
@@ -17,52 +18,49 @@
       $(window).on("scroll", function () {
         var $header              = $("header.navbar"),
             $headerCont          = $("header.navbar .container"),
-            fixedHeaderScrollPos = 135,
+            fixedHeaderScrollPos = 1,
             $width               = $(window).width();
-
-        if ($width >= 1024) {
-          fixedHeaderScrollPos = 135;
-        }
-        else if ($width >= 768) {
-          fixedHeaderScrollPos = 95;
+        /*
+        if ($width >= 768) {
+          fixedHeaderScrollPos = 28;
         }
         else if ($width >= 480) {
-          fixedHeaderScrollPos = 72;
+          fixedHeaderScrollPos = 15;
         }
         else {
-          fixedHeaderScrollPos = 60;
+          fixedHeaderScrollPos = 0;
         }
+        */
 
         if ($(window).scrollTop() >= fixedHeaderScrollPos) {
-          if (isFixedHeader) return;
+          //if (isFixedHeader) return;
 
           // keep header fixed at this scroll position
-          $header.removeClass('navbar-static-top').addClass('navbar-fixed-top');
-          $('body').removeClass('navbar-is-static-top').addClass('navbar-is-fixed-top');
+          //$header.removeClass('navbar-static-top').addClass('navbar-fixed-top');
+          //$('body').removeClass('navbar-is-static-top').addClass('navbar-is-fixed-top');
 
           // fix header and add shadow
-          $header.css({position: 'fixed', top: -fixedHeaderScrollPos + 'px'});
+          //$header.css({position: 'fixed', top: -fixedHeaderScrollPos + 'px'});
           $headerCont.css("box-shadow", "0 4px 3px -4px gray");
 
-          isFixedHeader = true;
+          //isFixedHeader = true;
         }
         else {
-          if (!isFixedHeader) return;
+          //if (!isFixedHeader) return;
 
           // set header to static in top scroll region
-          $header.removeClass('navbar-fixed-top').addClass('navbar-static-top');
-          $('body').removeClass('navbar-is-fixed-top').addClass('navbar-is-static-top');
+          //$header.removeClass('navbar-fixed-top').addClass('navbar-static-top');
+          //$('body').removeClass('navbar-is-fixed-top').addClass('navbar-is-static-top');
 
           // remove shadow from header
-          $header.css({position: 'static', top: 'auto'});
+          //$header.css({position: 'static', top: 'auto'});
           $headerCont.css("box-shadow", "none");
 
-          isFixedHeader = false;
+          //isFixedHeader = false;
         }
       });
     }
   };
-   */
 
   /**
    * Allows full size clickable cards (open node in full size).
@@ -104,6 +102,10 @@
         var $this = $(this),
             $text = $this.text();
 
+        if ($text.length < 5) {
+          // xl font size
+          $this.addClass('font-size-xxl')
+        }
         if ($text.length < 10) {
           // xl font size
           $this.addClass('font-size-xl')

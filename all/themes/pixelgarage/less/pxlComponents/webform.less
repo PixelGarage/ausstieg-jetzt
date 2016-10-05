@@ -32,11 +32,12 @@
 // Mixins
 // -------------------------
 .form-label() {
+  margin-bottom: 0;
   width: auto;
   font-family: @pxl-text-font;
   #pxl-mixins.font-size-responsive(19px, 14px);
   font-weight: normal;
-  letter-spacing: normal;
+  letter-spacing: 0.03em;
   text-align: left;
   text-transform: none;
   color: @webform-color-label;
@@ -55,7 +56,7 @@
   #pxl-mixins.font-size-responsive(27px, 20px);
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  //text-transform: capitalize;
   color: @color;
   outline: none;
   #pxl-mixins.border-radius(@radius);
@@ -72,6 +73,7 @@
 // Webform settings
 // -------------------------
 form.webform-client-form {
+  position:relative;
   margin-top: 20px;
 
   // all fieldsets
@@ -248,7 +250,7 @@ form.webform-client-form {
   }
 
   .webform-component {
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
     padding: 0;
     max-width: @webform-max-width;
     background: none;
@@ -448,6 +450,12 @@ form.webform-client-form {
         line-height: 17px;
         text-align: left;
         background: none;
+      }
+
+      &.webform-component--legal {
+        position: absolute;
+        bottom: -100px;
+        left: 0;
       }
     }
 
