@@ -485,7 +485,7 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   //
   // get strings from post
   $quote = $post->field_quote[$post->language][0]['value'];
-  $slogan = t('#EsGeht');
+  $slogan = t('#AKWfail');
   $html_quote = '<span>' . $quote . '</span><span style="color:#ff0000"> '. $slogan . '</span>';
   $your_name = $post->field_your_name[$post->language][0]['value'];
 
