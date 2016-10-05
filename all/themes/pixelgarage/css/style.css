@@ -13352,6 +13352,7 @@ form.confirmation div .form-actions a#edit-actions-cancel:focus {
 form.webform-client-form {
   position: relative;
   margin-top: 20px;
+  margin-bottom: 200px;
 }
 form.webform-client-form fieldset.panel {
   margin: 0 auto 30px;
@@ -13947,7 +13948,7 @@ form.webform-client-form .webform-component.webform-component-markup p {
 }
 form.webform-client-form .webform-component.webform-component-markup.webform-component--legal {
   position: absolute;
-  bottom: -100px;
+  bottom: -200px;
   left: 0;
 }
 form.webform-client-form .webform-component.webform-container-inline {
