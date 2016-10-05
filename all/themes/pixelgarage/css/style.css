@@ -13251,6 +13251,7 @@ form.confirmation div .form-actions button#edit-actions-submit {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13305,6 +13306,7 @@ form.confirmation div .form-actions a#edit-actions-cancel {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
@@ -13507,6 +13509,7 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13579,6 +13582,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -13874,6 +13878,7 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -14011,6 +14016,7 @@ form.webform-client-form div.form-actions button.webform-submit {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
@@ -14064,6 +14070,7 @@ form.webform-client-form div.form-actions a.back-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
@@ -14132,6 +14139,7 @@ form.webform-client-form div.form-actions a.done-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
+  text-transform: none;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;

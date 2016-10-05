@@ -31,8 +31,8 @@ $title = t('Thank you,');
 switch ($current_tnid) {
   case $upload_tnid:
     $webform = node_load($upload_tnid);
-    $submission = webform_get_submission($upload_tnid, $variables['sid']);
-    $post_nid = _get_submission_value($webform, $submission, 'post_nid');
+    $submissions = webform_get_submissions(array('nid' => $upload_tnid, 'sid' => $variables['sid']));
+    $post_nid = _get_submission_value($webform, $submissions[$variables['sid']], 'post_nid');
     $ra_post = node_view(node_load($post_nid));
     break;
   case $delivery_tnid:
