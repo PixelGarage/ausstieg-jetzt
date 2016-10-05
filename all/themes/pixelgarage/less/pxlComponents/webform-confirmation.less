@@ -16,15 +16,20 @@
 .webform-confirmation {
   // in-block display of webform confirmation
   margin: 50px auto;
-  padding: 15px 30px;
-  width: 80%;
+  padding: 10px;
+  width: 100%;
   color: @text-color;
   #pxl-mixins.border-radius(5px);
   background: none;
 
+  @media @narrow {
+    padding: 15px 30px;
+    width: 80%;
+  }
+
   .confirmation-title {
     font-family: @pxl-text-font-bold;
-    #pxl-mixins.font-size-responsive(25px, 20px);
+    font-size: 30px;
     line-height: 30px;
     text-align: center;
   }

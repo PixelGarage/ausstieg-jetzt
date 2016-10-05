@@ -9237,7 +9237,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   text-align: center;
 }
 .node-post-page-wrapper .node-post-header .social-share {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .node-post-page-wrapper .node-post-header .social-share .a2a_kit {
@@ -14202,29 +14202,25 @@ form.webform-client-form div.form-actions a.done-link:hover {
  * --------------------------------------------------*/
 .webform-confirmation {
   margin: 50px auto;
-  padding: 15px 30px;
-  width: 80%;
+  padding: 10px;
+  width: 100%;
   color: #000000;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background: none;
 }
+@media screen and (min-width: 30em) {
+  .webform-confirmation {
+    padding: 15px 30px;
+    width: 80%;
+  }
+}
 .webform-confirmation .confirmation-title {
   font-family: 'Impact', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 30px;
   text-align: center;
-}
-@media screen and (min-width: 38.4em) {
-  .webform-confirmation .confirmation-title {
-    font-size: 3.25520833vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .webform-confirmation .confirmation-title {
-    font-size: 25px;
-  }
 }
 .webform-confirmation .confirmation-message {
   font-family: 'Impact', sans-serif;
