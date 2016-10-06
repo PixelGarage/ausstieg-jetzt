@@ -79,6 +79,10 @@ function pixelgarage_preprocess_rate_template_thumbs_up(&$vars) {
  * in the masonry.
  */
 function pixelgarage_preprocess_views_view_proximity (&$vars) {
+  // no injection used
+  $vars['testimonials'] = array();
+  return;
+
   //
   // check all filters
   $exposed_data = $vars['view']->exposed_data;
@@ -116,10 +120,9 @@ function pixelgarage_preprocess_views_view_proximity (&$vars) {
 
   //
   // inject items at random places
-  $vars['testimonials'] = array();
-  //_randomly_injected_testimonials($vars, $number_of_testimonials_per_page);
-  //_randomly_injected_testimonials($vars, $number_of_specials_per_page, true);
-  //_randomly_injected_social_items($vars, $number_of_some_items_per_page);
+  _randomly_injected_testimonials($vars, $number_of_testimonials_per_page);
+  _randomly_injected_testimonials($vars, $number_of_specials_per_page, true);
+  _randomly_injected_social_items($vars, $number_of_some_items_per_page);
 }
 
 /**
