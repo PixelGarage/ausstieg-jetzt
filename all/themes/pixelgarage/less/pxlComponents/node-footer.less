@@ -47,8 +47,6 @@
 // General settings
 // -------------------------
 .node.node-footer {
-  min-height: 50px;
-
   div.col-sm-12, .col-sm-6 {
     position: static;
 
@@ -65,11 +63,13 @@
     // image on the left
     .field-name-body {
       display: inline-block;
+      padding: 5px 10px;
       width: 100%;
 
       .field-item {
         #pxl-mixins.wysiwyg-body(16px);
         color: @pxl-color-gray;
+        letter-spacing: 0.03em;
 
         a {
           color: @pxl-color-gray;

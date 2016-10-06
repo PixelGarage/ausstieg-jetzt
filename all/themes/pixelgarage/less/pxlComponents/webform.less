@@ -35,7 +35,7 @@
   margin-bottom: 0;
   width: auto;
   font-family: @pxl-text-font;
-  #pxl-mixins.font-size-responsive(19px, 14px);
+  #pxl-mixins.font-size-responsive(30px, 24px);
   font-weight: normal;
   letter-spacing: 0.03em;
   text-align: left;
@@ -75,7 +75,11 @@
 form.webform-client-form {
   position:relative;
   margin-top: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
+
+  @media @narrow {
+    margin-bottom: 200px;
+  }
 
   // all fieldsets
   fieldset.panel {
@@ -455,8 +459,12 @@ form.webform-client-form {
 
       &.webform-component--legal {
         position: absolute;
-        bottom: -200px;
+        bottom: -300px;
         left: 0;
+
+        @media @narrow {
+          bottom: -200px;
+        }
       }
     }
 
