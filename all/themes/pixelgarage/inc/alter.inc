@@ -309,7 +309,9 @@ function _get_default_post_image() {
     'public://images/radioactivity-bin.png',
     'public://images/akw-riss.png',
   );
-  $img_uri = $default_images[mt_rand(0,2)];
+  mt_srand(time());
+  $index = mt_rand(0,2);
+  $img_uri = $default_images[$index];
 
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'file')
