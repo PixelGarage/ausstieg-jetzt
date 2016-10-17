@@ -149,9 +149,10 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
 
   } else {
     // create post node and save it in the submission
+    global $language;
     $post = new stdClass();
     $post->type = $step_options['step_info']['related node type'];
-    $post->language = LANGUAGE_NONE;
+    $post->language = $language->language ? $language->language : LANGUAGE_NONE;
     $post->uid = 1;
     $post->status = $status;
     $post->comment = 0;
@@ -162,14 +163,14 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   //
   // update submission data on the post and save it
   $post->title = t('@you says NO AKW', array('@you' => $submission->data[17][0])); // create node title
-  $post->field_e_mail[$post->language][0]['email'] = $submission->data[19][0]; // email
-  //$post->field_category[$post->language][0]['tid'] = $submission->data[20][0]; // Category
-  $post->field_your_name[$post->language][0]['value'] = $submission->data[17][0]; // your name
-  $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 100); // Quote
+  $post->field_e_mail[LANGUAGE_NONE][0]['email'] = $submission->data[19][0]; // email
+  //$post->field_category[LANGUAGE_NONE][0]['tid'] = $submission->data[20][0]; // Category
+  $post->field_your_name[LANGUAGE_NONE][0]['value'] = $submission->data[17][0]; // your name
+  $post->field_quote[LANGUAGE_NONE][0]['value'] = substr($submission->data[5][0], 0, 100); // Quote
   if ($submission->data[20][0] == 'yes') {
-    $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
+    $post->field_image[LANGUAGE_NONE][0]['fid'] = $submission->data[1][0]; // fid image
   } else {
-    $post->field_image[$post->language][0]['fid'] = _get_default_post_image();
+    $post->field_image[LANGUAGE_NONE][0]['fid'] = _get_default_post_image();
   }
   $post = node_submit($post);
   node_save($post);
@@ -220,15 +221,15 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
     $pdf_file->display  = 1;
     $pdf_file = file_save($pdf_file);
 
-    $post->field_postcard[$post->language][0]['fid'] = $pdf_file->fid;
-    $post->field_postcard[$post->language][0]['display'] = $pdf_file->display;
+    $post->field_postcard[LANGUAGE_NONE][0]['fid'] = $pdf_file->fid;
+    $post->field_postcard[LANGUAGE_NONE][0]['display'] = $pdf_file->display;
     $step_options['postcard_fid'] = $pdf_file->fid;
 
     // manage created hires image in node, if any
     if (isset($options['postcard_image_uri'])) {
       //
       // delete old image, if any
-      $old_img_fid = !empty($post->field_hires_image) ? $post->field_hires_image[$post->language][0]['fid'] : null;
+      $old_img_fid = !empty($post->field_hires_image) ? $post->field_hires_image[LANGUAGE_NONE][0]['fid'] : null;
       if (isset($old_img_fid)) {
         $old_img_file = file_load($old_img_fid);
         if ($old_img_file) {
@@ -247,7 +248,7 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
       $pdf_img->status   = FILE_STATUS_PERMANENT;
       $pdf_img = file_save($pdf_img);
 
-      $post->field_hires_image[$post->language][0]['fid'] = $pdf_img->fid;
+      $post->field_hires_image[LANGUAGE_NONE][0]['fid'] = $pdf_img->fid;
       $step_options['postcard_img_fid'] = $pdf_img->fid;
     }
     node_save($post);
